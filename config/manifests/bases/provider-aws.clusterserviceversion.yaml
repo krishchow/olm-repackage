@@ -1,0 +1,44 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: ClusterServiceVersion
+metadata:
+  annotations:
+    alm-examples: '[]'
+    capabilities: Basic Install
+  name: provider-aws.v0.0.0
+  namespace: placeholder
+spec:
+  apiservicedefinitions: {}
+  customresourcedefinitions: {}
+  description: the Crossplane Provider for AWS
+  displayName: Provider AWS
+  icon:
+  - base64data: ""
+    mediatype: ""
+  install:
+    spec:
+      deployments: null
+    strategy: ""
+  installModes:
+  - supported: true
+    type: OwnNamespace
+  - supported: true
+    type: SingleNamespace
+  - supported: true
+    type: MultiNamespace
+  - supported: true
+    type: AllNamespaces
+  keywords:
+  - provider
+  - crossplane
+  - aws
+  links:
+  - name: Provider Aws
+    url: https://provider-aws.domain
+  maintainers:
+  - email: krish@redhat.com
+    name: krish
+  maturity: alpha
+  provider:
+    name: provider-aws
+    url: github.com/redhat-et/provider-aws
+  version: 0.0.0

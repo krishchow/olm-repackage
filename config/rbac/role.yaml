@@ -1,0 +1,1628 @@
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  creationTimestamp: null
+  name: manager-role
+rules:
+- apiGroups:
+  - ""
+  resources:
+  - secrets
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - acm.aws.crossplane.io
+  resources:
+  - certificates
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - acm.aws.crossplane.io
+  resources:
+  - certificates/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - acm.aws.crossplane.io
+  resources:
+  - certificates/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - acmpca.aws.crossplane.io
+  resources:
+  - certificateauthorities
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - acmpca.aws.crossplane.io
+  resources:
+  - certificateauthorities/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - acmpca.aws.crossplane.io
+  resources:
+  - certificateauthorities/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - acmpca.aws.crossplane.io
+  resources:
+  - certificateauthoritypermissions
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - acmpca.aws.crossplane.io
+  resources:
+  - certificateauthoritypermissions/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - acmpca.aws.crossplane.io
+  resources:
+  - certificateauthoritypermissions/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - apigatewayv2.aws.crossplane.io
+  resources:
+  - apimappings
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - apigatewayv2.aws.crossplane.io
+  resources:
+  - apimappings/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - apigatewayv2.aws.crossplane.io
+  resources:
+  - apimappings/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - apigatewayv2.aws.crossplane.io
+  resources:
+  - apis
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - apigatewayv2.aws.crossplane.io
+  resources:
+  - apis/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - apigatewayv2.aws.crossplane.io
+  resources:
+  - apis/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - apigatewayv2.aws.crossplane.io
+  resources:
+  - authorizers
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - apigatewayv2.aws.crossplane.io
+  resources:
+  - authorizers/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - apigatewayv2.aws.crossplane.io
+  resources:
+  - authorizers/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - apigatewayv2.aws.crossplane.io
+  resources:
+  - deployments
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - apigatewayv2.aws.crossplane.io
+  resources:
+  - deployments/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - apigatewayv2.aws.crossplane.io
+  resources:
+  - deployments/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - apigatewayv2.aws.crossplane.io
+  resources:
+  - domainnames
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - apigatewayv2.aws.crossplane.io
+  resources:
+  - domainnames/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - apigatewayv2.aws.crossplane.io
+  resources:
+  - domainnames/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - apigatewayv2.aws.crossplane.io
+  resources:
+  - integrationresponses
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - apigatewayv2.aws.crossplane.io
+  resources:
+  - integrationresponses/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - apigatewayv2.aws.crossplane.io
+  resources:
+  - integrationresponses/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - apigatewayv2.aws.crossplane.io
+  resources:
+  - integrations
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - apigatewayv2.aws.crossplane.io
+  resources:
+  - integrations/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - apigatewayv2.aws.crossplane.io
+  resources:
+  - integrations/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - apigatewayv2.aws.crossplane.io
+  resources:
+  - models
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - apigatewayv2.aws.crossplane.io
+  resources:
+  - models/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - apigatewayv2.aws.crossplane.io
+  resources:
+  - models/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - apigatewayv2.aws.crossplane.io
+  resources:
+  - routeresponses
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - apigatewayv2.aws.crossplane.io
+  resources:
+  - routeresponses/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - apigatewayv2.aws.crossplane.io
+  resources:
+  - routeresponses/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - apigatewayv2.aws.crossplane.io
+  resources:
+  - routes
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - apigatewayv2.aws.crossplane.io
+  resources:
+  - routes/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - apigatewayv2.aws.crossplane.io
+  resources:
+  - routes/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - apigatewayv2.aws.crossplane.io
+  resources:
+  - stages
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - apigatewayv2.aws.crossplane.io
+  resources:
+  - stages/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - apigatewayv2.aws.crossplane.io
+  resources:
+  - stages/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - apigatewayv2.aws.crossplane.io
+  resources:
+  - vpclinks
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - apigatewayv2.aws.crossplane.io
+  resources:
+  - vpclinks/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - apigatewayv2.aws.crossplane.io
+  resources:
+  - vpclinks/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - aws.crossplane.io
+  resources:
+  - providerconfigs
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - aws.crossplane.io
+  resources:
+  - providerconfigs/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - aws.crossplane.io
+  resources:
+  - providerconfigs/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - aws.crossplane.io
+  resources:
+  - providerconfigusages
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - aws.crossplane.io
+  resources:
+  - providerconfigusages/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - aws.crossplane.io
+  resources:
+  - providerconfigusages/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - aws.crossplane.io
+  resources:
+  - providers
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - aws.crossplane.io
+  resources:
+  - providers/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - aws.crossplane.io
+  resources:
+  - providers/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - cache.aws.crossplane.io
+  resources:
+  - cacheclusters
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - cache.aws.crossplane.io
+  resources:
+  - cacheclusters/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - cache.aws.crossplane.io
+  resources:
+  - cacheclusters/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - cache.aws.crossplane.io
+  resources:
+  - cachesubnetgroups
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - cache.aws.crossplane.io
+  resources:
+  - cachesubnetgroups/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - cache.aws.crossplane.io
+  resources:
+  - cachesubnetgroups/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - cache.aws.crossplane.io
+  resources:
+  - replicationgroups
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - cache.aws.crossplane.io
+  resources:
+  - replicationgroups/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - cache.aws.crossplane.io
+  resources:
+  - replicationgroups/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - database.aws.crossplane.io
+  resources:
+  - dbsubnetgroups
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - database.aws.crossplane.io
+  resources:
+  - dbsubnetgroups/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - database.aws.crossplane.io
+  resources:
+  - dbsubnetgroups/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - database.aws.crossplane.io
+  resources:
+  - rdsinstances
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - database.aws.crossplane.io
+  resources:
+  - rdsinstances/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - database.aws.crossplane.io
+  resources:
+  - rdsinstances/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - dynamodb.aws.crossplane.io
+  resources:
+  - backups
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - dynamodb.aws.crossplane.io
+  resources:
+  - backups/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - dynamodb.aws.crossplane.io
+  resources:
+  - backups/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - dynamodb.aws.crossplane.io
+  resources:
+  - globaltables
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - dynamodb.aws.crossplane.io
+  resources:
+  - globaltables/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - dynamodb.aws.crossplane.io
+  resources:
+  - globaltables/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - dynamodb.aws.crossplane.io
+  resources:
+  - tables
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - dynamodb.aws.crossplane.io
+  resources:
+  - tables/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - dynamodb.aws.crossplane.io
+  resources:
+  - tables/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - ec2.aws.crossplane.io
+  resources:
+  - elasticips
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - ec2.aws.crossplane.io
+  resources:
+  - elasticips/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - ec2.aws.crossplane.io
+  resources:
+  - elasticips/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - ec2.aws.crossplane.io
+  resources:
+  - internetgateways
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - ec2.aws.crossplane.io
+  resources:
+  - internetgateways/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - ec2.aws.crossplane.io
+  resources:
+  - internetgateways/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - ec2.aws.crossplane.io
+  resources:
+  - natgateways
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - ec2.aws.crossplane.io
+  resources:
+  - natgateways/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - ec2.aws.crossplane.io
+  resources:
+  - natgateways/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - ec2.aws.crossplane.io
+  resources:
+  - routetables
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - ec2.aws.crossplane.io
+  resources:
+  - routetables/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - ec2.aws.crossplane.io
+  resources:
+  - routetables/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - ec2.aws.crossplane.io
+  resources:
+  - securitygroups
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - ec2.aws.crossplane.io
+  resources:
+  - securitygroups/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - ec2.aws.crossplane.io
+  resources:
+  - securitygroups/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - ec2.aws.crossplane.io
+  resources:
+  - subnets
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - ec2.aws.crossplane.io
+  resources:
+  - subnets/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - ec2.aws.crossplane.io
+  resources:
+  - subnets/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - ec2.aws.crossplane.io
+  resources:
+  - vpcs
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - ec2.aws.crossplane.io
+  resources:
+  - vpcs/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - ec2.aws.crossplane.io
+  resources:
+  - vpcs/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - ecr.aws.crossplane.io
+  resources:
+  - repositories
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - ecr.aws.crossplane.io
+  resources:
+  - repositories/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - ecr.aws.crossplane.io
+  resources:
+  - repositories/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - efs.aws.crossplane.io
+  resources:
+  - filesystems
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - efs.aws.crossplane.io
+  resources:
+  - filesystems/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - efs.aws.crossplane.io
+  resources:
+  - filesystems/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - eks.aws.crossplane.io
+  resources:
+  - clusters
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - eks.aws.crossplane.io
+  resources:
+  - clusters/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - eks.aws.crossplane.io
+  resources:
+  - clusters/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - eks.aws.crossplane.io
+  resources:
+  - fargateprofiles
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - eks.aws.crossplane.io
+  resources:
+  - fargateprofiles/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - eks.aws.crossplane.io
+  resources:
+  - fargateprofiles/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - eks.aws.crossplane.io
+  resources:
+  - nodegroups
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - eks.aws.crossplane.io
+  resources:
+  - nodegroups/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - eks.aws.crossplane.io
+  resources:
+  - nodegroups/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - elasticloadbalancing.aws.crossplane.io
+  resources:
+  - elbattachments
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - elasticloadbalancing.aws.crossplane.io
+  resources:
+  - elbattachments/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - elasticloadbalancing.aws.crossplane.io
+  resources:
+  - elbattachments/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - elasticloadbalancing.aws.crossplane.io
+  resources:
+  - elbs
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - elasticloadbalancing.aws.crossplane.io
+  resources:
+  - elbs/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - elasticloadbalancing.aws.crossplane.io
+  resources:
+  - elbs/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - identity.aws.crossplane.io
+  resources:
+  - iamaccesskeys
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - identity.aws.crossplane.io
+  resources:
+  - iamaccesskeys/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - identity.aws.crossplane.io
+  resources:
+  - iamaccesskeys/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - identity.aws.crossplane.io
+  resources:
+  - iamgrouppolicyattachments
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - identity.aws.crossplane.io
+  resources:
+  - iamgrouppolicyattachments/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - identity.aws.crossplane.io
+  resources:
+  - iamgrouppolicyattachments/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - identity.aws.crossplane.io
+  resources:
+  - iamgroups
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - identity.aws.crossplane.io
+  resources:
+  - iamgroups/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - identity.aws.crossplane.io
+  resources:
+  - iamgroups/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - identity.aws.crossplane.io
+  resources:
+  - iamgroupusermemberships
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - identity.aws.crossplane.io
+  resources:
+  - iamgroupusermemberships/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - identity.aws.crossplane.io
+  resources:
+  - iamgroupusermemberships/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - identity.aws.crossplane.io
+  resources:
+  - iampolicies
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - identity.aws.crossplane.io
+  resources:
+  - iampolicies/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - identity.aws.crossplane.io
+  resources:
+  - iampolicies/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - identity.aws.crossplane.io
+  resources:
+  - iamrolepolicyattachments
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - identity.aws.crossplane.io
+  resources:
+  - iamrolepolicyattachments/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - identity.aws.crossplane.io
+  resources:
+  - iamrolepolicyattachments/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - identity.aws.crossplane.io
+  resources:
+  - iamroles
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - identity.aws.crossplane.io
+  resources:
+  - iamroles/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - identity.aws.crossplane.io
+  resources:
+  - iamroles/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - identity.aws.crossplane.io
+  resources:
+  - iamuserpolicyattachments
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - identity.aws.crossplane.io
+  resources:
+  - iamuserpolicyattachments/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - identity.aws.crossplane.io
+  resources:
+  - iamuserpolicyattachments/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - identity.aws.crossplane.io
+  resources:
+  - iamusers
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - identity.aws.crossplane.io
+  resources:
+  - iamusers/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - identity.aws.crossplane.io
+  resources:
+  - iamusers/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - kms.aws.crossplane.io
+  resources:
+  - keys
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - kms.aws.crossplane.io
+  resources:
+  - keys/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - kms.aws.crossplane.io
+  resources:
+  - keys/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - notification.aws.crossplane.io
+  resources:
+  - snssubscriptions
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - notification.aws.crossplane.io
+  resources:
+  - snssubscriptions/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - notification.aws.crossplane.io
+  resources:
+  - snssubscriptions/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - notification.aws.crossplane.io
+  resources:
+  - snstopics
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - notification.aws.crossplane.io
+  resources:
+  - snstopics/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - notification.aws.crossplane.io
+  resources:
+  - snstopics/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - rds.aws.crossplane.io
+  resources:
+  - dbclusters
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - rds.aws.crossplane.io
+  resources:
+  - dbclusters/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - rds.aws.crossplane.io
+  resources:
+  - dbclusters/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - redshift.aws.crossplane.io
+  resources:
+  - clusters
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - redshift.aws.crossplane.io
+  resources:
+  - clusters/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - redshift.aws.crossplane.io
+  resources:
+  - clusters/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - route53.aws.crossplane.io
+  resources:
+  - hostedzones
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - route53.aws.crossplane.io
+  resources:
+  - hostedzones/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - route53.aws.crossplane.io
+  resources:
+  - hostedzones/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - route53.aws.crossplane.io
+  resources:
+  - resourcerecordsets
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - route53.aws.crossplane.io
+  resources:
+  - resourcerecordsets/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - route53.aws.crossplane.io
+  resources:
+  - resourcerecordsets/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - s3.aws.crossplane.io
+  resources:
+  - bucketpolicies
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - s3.aws.crossplane.io
+  resources:
+  - bucketpolicies/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - s3.aws.crossplane.io
+  resources:
+  - bucketpolicies/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - s3.aws.crossplane.io
+  resources:
+  - buckets
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - s3.aws.crossplane.io
+  resources:
+  - buckets/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - s3.aws.crossplane.io
+  resources:
+  - buckets/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - secretsmanager.aws.crossplane.io
+  resources:
+  - secrets
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - secretsmanager.aws.crossplane.io
+  resources:
+  - secrets/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - secretsmanager.aws.crossplane.io
+  resources:
+  - secrets/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - sfn.aws.crossplane.io
+  resources:
+  - activities
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - sfn.aws.crossplane.io
+  resources:
+  - activities/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - sfn.aws.crossplane.io
+  resources:
+  - activities/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - sfn.aws.crossplane.io
+  resources:
+  - statemachines
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - sfn.aws.crossplane.io
+  resources:
+  - statemachines/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - sfn.aws.crossplane.io
+  resources:
+  - statemachines/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - sqs.aws.crossplane.io
+  resources:
+  - queues
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - sqs.aws.crossplane.io
+  resources:
+  - queues/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - sqs.aws.crossplane.io
+  resources:
+  - queues/status
+  verbs:
+  - get
+  - patch
+  - update
