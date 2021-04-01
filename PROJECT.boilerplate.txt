@@ -1,0 +1,9 @@
+domain: crossplane.io
+layout: go.kubebuilder.io/v3
+projectName: IMAGE
+repo: github.com/REPO
+version: "3"
+plugins:
+  manifests.sdk.operatorframework.io/v2: {}
+  scorecard.sdk.operatorframework.io/v2: {}
+resources:
