@@ -1,0 +1,44 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: ClusterServiceVersion
+metadata:
+  annotations:
+    alm-examples: '[]'
+    capabilities: Basic Install
+  name: IMAGE.TAG
+  namespace: placeholder
+spec:
+  apiservicedefinitions: {}
+  customresourcedefinitions: {}
+  description: the OLM provider based on REPO
+  displayName: IMAGE
+  icon:
+  - base64data: ""
+    mediatype: ""
+  install:
+    spec:
+      deployments: null
+    strategy: ""
+  installModes:
+  - supported: true
+    type: OwnNamespace
+  - supported: true
+    type: SingleNamespace
+  - supported: true
+    type: MultiNamespace
+  - supported: true
+    type: AllNamespaces
+  keywords:
+  - provider
+  - crossplane
+  - cloud
+  links:
+  - name: IMAGE
+    url: github.com/REPO
+  maintainers:
+  - email: krish@redhat.com
+    name: krish
+  maturity: alpha
+  provider:
+    name: IMAGE
+    url: github.com/REPO
+  version: TAG
