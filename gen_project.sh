@@ -1,5 +1,8 @@
 #!/bin/bash
 
+sed -i "s|IMAGE|$IMAGE|g" ./PROJECT.boilerplate.txt
+sed -i "s|REPO|$REPO|g" ./PROJECT.boilerplate.txt
+
 cat ./PROJECT.boilerplate.txt
 
 files=$(find ./config/crd/bases/*.yaml -printf "%f\n" | sort)
