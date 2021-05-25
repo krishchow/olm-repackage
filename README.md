@@ -48,9 +48,9 @@ $ make docker-build docker-push IMG=$OPERATOR_IMG
 5. The last step involves building the bundle for our operator. We also need to create our project file, then we will template various field into manifests, by running:
 
 ```bash
-$ IMAGE=provider-aws
-$ REPO=crossplane/provider-aws
-$ TAG=master
+$ export IMAGE=provider-aws
+$ export REPO=crossplane/provider-aws
+$ export TAG=master
 $ ./gen_project.sh > PROJECT
 $ find config \( -type d -name .git -prune \) -o -type f | xargs sed -i "s|IMAGE|$IMAGE|g"
 $ find config \( -type d -name .git -prune \) -o -type f | xargs sed -i "s|REPO|$REPO|g"
